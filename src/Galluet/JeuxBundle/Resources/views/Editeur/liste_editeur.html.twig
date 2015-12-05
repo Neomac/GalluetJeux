@@ -1,6 +1,19 @@
 {% extends 'GalluetJeuxBundle::layout.html.twig' %}
 {% block body %}
 
+    {% for editeur in editeurs %}
+        <div>
+            {{ editeur.nom }}
+        </div>
+        {% for jeu in editeur.jeux %}
+            <div>
+                {{ jeu.nom }}
+            </div>
+        {% endfor %}
+    {% endfor %}
+
+
+
     <table>
         {% for editeur in editeurs %}
         <tr>

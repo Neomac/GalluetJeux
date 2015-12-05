@@ -110,4 +110,9 @@ class Editeur
     {
         return $this->jeux;
     }
+
+    public function __toString()
+    {
+        return $this->nom;
+    }
 }

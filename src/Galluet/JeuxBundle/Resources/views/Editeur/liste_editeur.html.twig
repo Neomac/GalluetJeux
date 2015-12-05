@@ -7,6 +7,11 @@
             <td style="width: 50%;">
                 {{ editeur.nom }}
             </td>
+            {% for jeu in editeur.jeux %}
+                <td style="width: 50%;">
+                    {{ jeux.nom }}
+                </td>
+            {% endfor %}
         </tr>
         {% endfor %}
     </table>

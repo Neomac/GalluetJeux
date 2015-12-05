@@ -1,18 +1,21 @@
 {% extends 'GalluetJeuxBundle::layout.html.twig' %}
 {% block body %}
 
-    <div style="width: 50%; hight: 100px; background-color: #0000F0">
-        Test
+    <div style="width: 100%; overflow: hidden;">
+        <div style="width: 50%; height: 100px; background-color: #0000F0; float: left;">
+            Test
+        </div>
+        <div style="width: 50%; height: 100px; background-color: #dd4444; float: left;">
+            Test
+        </div>
     </div>
-    <div style="width: 50%; hight: 100px; background-color: #dd4444">
-        Test
-    </div>
-    <br/>
-    <div style="width: 50%; hight: 100px; background-color: brown">
-        Test
-    </div>
-    <div style="width: 50%; hight: 100px; background-color: yellow">
-        Test
+    <div style="width: 100%; overflow: hidden;">
+        <div style="width: 50%; height: 100px; background-color: mediumpurple; float: left;">
+            Test
+        </div>
+        <div style="width: 50%; height: 100px; background-color: yellow; float: left;">
+            Test
+        </div>
     </div>
 
     <a href="{{ path('g_creer_jeu') }}"style="display: inline-block;padding-top:5px; padding-bottom: 5px; padding-left: 10px; padding-right: 10px;margin:10px; border-radius:2px;background-color:#0088CC;color:white;border:1px solid black;text-decoration: none;"> Creer un jeu </a>

@@ -33,7 +33,7 @@ class Jeu
     /**
      * @var string
      *
-     * @ORM\ManyToOne(targetEntity="Galluet\JeuxBundle\Entity\Editeur")
+     * @ORM\ManyToOne(targetEntity="Galluet\JeuxBundle\Entity\Editeur", inversedBy="jeux")
      */
     private $editeur;
 
@@ -41,6 +41,7 @@ class Jeu
      * @var string
      *
      * @ORM\Column(name="url", type="string", length=255)
+     *
      */
     private $url;
 

@@ -28,6 +28,20 @@ class Editeur
      */
     private $nom;
 
+    /**
+     * @var string
+     *
+     * @ORM\OneToMany(targetEntity="Galluet\JeuxBundle\Entity\Jeu", mappedBy="editeur")
+     */
+    private $jeux;
+
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->jeux = new \Doctrine\Common\Collections\ArrayCollection();
+    }
 
     /**
      * Get id
@@ -62,5 +76,38 @@ class Editeur
     {
         return $this->nom;
     }
-}
 
+    /**
+     * Add jeux
+     *
+     * @param \Galluet\JeuxBundle\Entity\Jeu $jeux
+     *
+     * @return Editeur
+     */
+    public function addJeux(\Galluet\JeuxBundle\Entity\Jeu $jeux)
+    {
+        $this->jeux[] = $jeux;
+
+        return $this;
+    }
+
+    /**
+     * Remove jeux
+     *
+     * @param \Galluet\JeuxBundle\Entity\Jeu $jeux
+     */
+    public function removeJeux(\Galluet\JeuxBundle\Entity\Jeu $jeux)
+    {
+        $this->jeux->removeElement($jeux);
+    }
+
+    /**
+     * Get jeux
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getJeux()
+    {
+        return $this->jeux;
+    }
+}

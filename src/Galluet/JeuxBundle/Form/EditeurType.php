@@ -6,7 +6,7 @@ use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolverInterface;
 
-class JeuType extends AbstractType
+class EditeurType extends AbstractType
 {
     /**
      * @param FormBuilderInterface $builder
@@ -15,11 +15,7 @@ class JeuType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('nom','text', array(
-              'required' => false,
-            ))
-            ->add('url')
-            ->add('editeur')
+            ->add('nom')
         ;
     }
     
@@ -29,7 +25,7 @@ class JeuType extends AbstractType
     public function setDefaultOptions(OptionsResolverInterface $resolver)
     {
         $resolver->setDefaults(array(
-            'data_class' => 'Galluet\JeuxBundle\Entity\Jeu'
+            'data_class' => 'Galluet\JeuxBundle\Entity\Editeur'
         ));
     }
 
@@ -38,6 +34,6 @@ class JeuType extends AbstractType
      */
     public function getName()
     {
-        return 'galluet_jeuxbundle_jeu';
+        return 'galluet_jeuxbundle_editeur';
     }
 }

@@ -33,6 +33,13 @@ class Jeu
     /**
      * @var string
      *
+     * @ORM\ManyToOne(targetEntity="Galluet\JeuxBundle\Entity\Editeur")
+     */
+    private $editeur;
+
+    /**
+     * @var string
+     *
      * @ORM\Column(name="url", type="string", length=255)
      */
     private $url;
@@ -100,5 +107,28 @@ class Jeu
     {
         return $this->url;
     }
-}
 
+    /**
+     * Set editeur
+     *
+     * @param \Galluet\JeuxBundle\Entity\Editeur $editeur
+     *
+     * @return Jeu
+     */
+    public function setEditeur(\Galluet\JeuxBundle\Entity\Editeur $editeur = null)
+    {
+        $this->editeur = $editeur;
+
+        return $this;
+    }
+
+    /**
+     * Get editeur
+     *
+     * @return \Galluet\JeuxBundle\Entity\Editeur
+     */
+    public function getEditeur()
+    {
+        return $this->editeur;
+    }
+}

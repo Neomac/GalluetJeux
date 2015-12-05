@@ -9,3 +9,11 @@ g_creer_jeu:
 g_liste_jeu:
     path:     /jeu/liste
     defaults: { _controller: GalluetJeuxBundle:Default:liste_jeu }
+
+g_creer_editeur:
+    path:     /editeur/creer
+    defaults: { _controller: GalluetJeuxBundle:Default:creer_editeur }
+
+g_liste_editeur:
+    path:     /jeu/editeur
+    defaults: { _controller: GalluetJeuxBundle:Default:liste_editeur }

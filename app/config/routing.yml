@@ -1,0 +1,3 @@
+galluet_jeux:
+    resource: "@GalluetJeuxBundle/Resources/config/routing.yml"
+    prefix:   /

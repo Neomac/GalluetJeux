@@ -1,0 +1,11 @@
+g_homepage:
+    path:     /hello
+    defaults: { _controller: GalluetJeuxBundle:Default:index }
+
+g_creer_jeu:
+    path:     /jeu/creer
+    defaults: { _controller: GalluetJeuxBundle:Default:creer_jeu }
+
+g_liste_jeu:
+    path:     /jeu/liste
+    defaults: { _controller: GalluetJeuxBundle:Default:liste_jeu }

@@ -1,0 +1,14 @@
+{% extends 'GalluetJeuxBundle::layout.html.twig' %}
+{% block body %}
+
+    {{ form_start(form) }}
+
+    {{ form_widget(form) }}
+
+    {{ form_rest(form) }}
+
+    <input type="submit"/>
+
+    {{ form_end(form) }}
+
+{% endblock %}

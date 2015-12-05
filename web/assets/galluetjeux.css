@@ -1,0 +1,29 @@
+.btn {
+    display: inline-block;
+    padding:5px 10px;
+    margin:10px;
+    border-radius:2px;
+    border:1px solid black;
+    text-decoration: none;
+}
+
+.btn.btn-default {
+    background-color:#0088CC;
+    color:white;
+}
+
+.btn-warning {
+    background-color: #cc7105;
+    color: #000000;
+}
+
+.btn-block {
+    font-size: 23px;
+    width: 80%;
+    display: block;
+}
+
+#megabtn {
+    font-size: 25px;
+    font-weight: bold;
+}
